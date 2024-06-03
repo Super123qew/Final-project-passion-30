@@ -8,7 +8,7 @@ ROBLOX is an online platform where creator(s) can create their own game that is 
 
 ## Theme: [Reference to what genre our game is](https://en.wikipedia.org/wiki/Tower_defense)
 
-Our game has classes of enemies who get stronger as the game progresses and who travel along a set path until they reach the end and deduct health for getting past the defenses. Players place mini troops placed anywhere except on the path who attack the enemies until they are dead. These mini troops have unique ways to attack i.e. a grenade troop does area damage whereas a sniper will do maximum damage against one enemy. An 
+Our game has classes of enemies who get stronger as the game progresses and who travel along a set path until they reach the end and deduct health for getting past the defenses. Players place mini troops placed anywhere except on the path who attack the enemies until they are dead. These mini troops have unique ways to attack i.e. a grenade troop does area damage whereas a sniper will do maximum damage against one enemy. The concept is further explained in our figma design
 
 [Figma sketch](https://www.figma.com/design/6sJndmNCLdootVa2ORXTOx/Figma-basics?node-id=1669-162202&t=ZU76rB9vEwzVN5bx-1)
 
