@@ -44,6 +44,12 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 - Work on some sketches of our game on a figma 
 - Begin prelimenary work for our game
 
+### Weel 2:
+
+- Finalized concept of our game on figma document
+- Searched up some tutorials on our game type to learn how to create it
+- Created the prototype on ROBLOX 
+
 
 ## Future work/plans
 
