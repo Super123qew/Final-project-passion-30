@@ -31,6 +31,7 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 - [ ]  Advanced troop(s) made
 - [ ]  Upgrade system made for troops **(CUT)**
 - [ ]  Special enemy type(s) made  **(CUT)**
+- [ ]  Simple database system that stores win count
 
 
 
