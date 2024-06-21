@@ -27,8 +27,8 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 
 - [ ]  Sound design incoporated in gameplay **(CUT)**
 - [ ]  Lobby area before playing
-- [ ]  Graphic design revamped (Custom models)
-- [ ]  Advanced troop(s) made
+- [x]  Graphic design revamped (Custom models)
+- [x]  Advanced troop(s) made
 - [ ]  Upgrade system made for troops **(CUT)**
 - [ ]  Special enemy type(s) made  **(CUT)**
 - [ ]  Simple database system that stores win count
