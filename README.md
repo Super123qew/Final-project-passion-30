@@ -68,6 +68,7 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 - Basic GUI for troop selection created
 - Ported source code into GitHub and created pseudocode
 - Attempted basic database system for the game
+- Basic money system created
 
 ## Future plans/reflections
 
