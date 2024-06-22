@@ -50,7 +50,7 @@
  
 ## GameController Local Script
 
-- Retrieves necessary game services'
+- Retrieves necessary game services
 - Sets up references for the player camera and GUI among other things
 - Multiple variables are created here stating conditions for player I.E limiting 10 towers for the player
 - Mouse ray cast is used for tower placement determining where it can be spawned
@@ -73,3 +73,9 @@
   ##  DataStore script (WIP)
 
   - Retrieves necessary game services
+  - 
+
+  ## OnPLayerAdded Script
+
+  - Retrieves necessary game services
+  - 
