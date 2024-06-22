@@ -490,6 +490,59 @@ workspace.Mobs.ChildAdded:Connect(animateMob)
 DataStore Script (WIP)
 
 ```luau
+local DataStoreService = game:GetService("DataStoreService")
+local dataStore = DataStoreService:GetDataStore("Info")
+
+local function saveData (player)
+	local tableToSave = {
+		player.leaderstats.wins.Value;
+		
+	}
+	local success, errorMessage = pcall(dataStore.SetAsync, dataStore, player.UserId, tableToSave)
+	
+	if success then
+		print("Data has been saved")
+	else
+		print("Data has not been saved")
+	end
+	
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+	player.CharacterAdded:Wait()
+	local leaderstats = Instance.new("Folder")
+	leaderstats.Name ="leaderstats"
+	leaderstats.Parent = player
+	
+	local wins = Instance.new("IntValue")
+	wins.Name = "Wins"
+	wins.Parent = leaderstats
+	wins.Value = 0
+	local data = nil
+	
+	local success, errorMessage = pcall (function()
+		data= dataStore:GetAsync(player.UserId)
+	end)
+	
+	
+	if success and data then
+		wins.Value = data [1]
+	else
+		warn("The player has no data")
+		
+	end
+end)
+
+game.Players.PlayerRemoving:Connect(function(player)
+	saveData(player)
+end)
+game:BindToClose(function()
+	for _, player in ipairs(game.Players:GetPlayers()) do 
+		task.spawn(saveData, player)
+	end
+	
+end)
+
 
 ```
 
