@@ -48,7 +48,7 @@
   - Collisions are turned off by setting towers in a collision group that cant touch players
   - Start the tower's attack behavior using a coroutine
   - Checks if the player has enough gold and isn't past their max limit of towers before placement
-  - Price of tower is subtracted from the players gold count if the above conditions are met
+  - The price of the tower is subtracted from the player gold count if the above conditions are met
  
 ## GameController Local Script
 
@@ -76,8 +76,11 @@
 
   ##  DataStore script (WIP)
 
-  - Retrieves necessary game services
-  - 
+  - Retrieves necessary game services such as connecting to ROBLOX's data stores
+  - A table of wins of the player is created
+  - Creates a leaderboard when the player joins the game so they can see how many wins they have
+  - Saves the data if any is needed to be saved when the player leaves
+  
 
   ## OnPLayerAdded Script
 
