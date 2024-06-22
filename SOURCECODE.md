@@ -206,7 +206,10 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 local events = ReplicatedStorage:WaitForChild("events")
 local spawnTowerEvent = events:WaitForChild("SpawnTower")
+local functions = ReplicatedStorage:WaitForChild("Functions")
+local requestTowerFunction = functions:WaitForChild("RequestTower")
 
+local maxTowers = 10
 local tower = {}
 
 function FindNearestTarget(newTower, range)
@@ -248,11 +251,11 @@ function tower.Attack(newTower, player)
 end
 
 function tower.Spawn(player, name, cframe)
-	local towerExists = ReplicatedStorage.Towers:FindFirstChild(name)
+	local allowedToSpawn = tower.CheckSpawn (player, name)
 	
-	if towerExists then
+	if allowedToSpawn then
 		
-		local newTower = towerExists:Clone()
+		local newTower = ReplicatedStorage.Towers[name]:Clone()
 		newTower.HumanoidRootPart.CFrame = cframe
 		newTower.Parent = workspace.Towers
 		newTower.HumanoidRootPart:SetNetworkOwner(nil)
@@ -270,6 +273,9 @@ function tower.Spawn(player, name, cframe)
 			end
 		end
 	
+	player.Gold.Value -=newTower.Config.Price.Value
+	player.PlacedTowers.Value += 1
+	
 	
 		coroutine.wrap(tower.Attack)(newTower, player)
 		--move into workspace
@@ -278,9 +284,36 @@ function tower.Spawn(player, name, cframe)
 	end
 end
 
+
+
 spawnTowerEvent.OnServerEvent:Connect(tower.Spawn)
 
+
+function tower.CheckSpawn (player, name)
+	local towerExists = ReplicatedStorage.Towers:FindFirstChild(name)
+
+	if towerExists then
+		if towerExists.Config.Price.Value <= player.Gold.Value then
+			if player.PlacedTowers.Value < maxTowers then
+				return true
+			else 
+				warn ("Player has reached max limit")
+				
+			end
+		else
+			warn ("Player cannot afford")
+		end
+	else 
+		warn("That tower doesn't exist")
+	end
+	
+	return false
+		end
+		requestTowerFunction.OnServerInvoke = tower.CheckSpawn
+
 return tower
+
+
 
 ```
 
