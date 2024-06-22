@@ -47,6 +47,7 @@
   - Create a "BodyGyro" to facilitate the turning of troops toward enemies
   - Collisions are turned off by setting towers in a collision group that cant touch players
   - Start the tower's attack behavior using a coroutine
+  - Checks if the player has enough gold and isn't past their max limit of towers before placement
  
 ## GameController Local Script
 
@@ -56,9 +57,11 @@
 - Mouse ray cast is used for tower placement determining where it can be spawned
 - A temporary tower is used as a placeholder for spawning (A semi-transparent "tower" that helps with tower placement)
 - Removed once the actual tower is placed
-- GUI setup is done here creating buttons allowing for separate troop types
+- GUI setup is done here creating buttons allowing for separate troop types with costs
+- Gold GUI is also done here showing the current amount of gold a player currently has
 - Inputs are handled such as with left click placing towers if in a valid position on the map
 - The placeholder tower changes colour to red if the ray cast result is not part of the designated "Tower" areas.
+  
 
 
 ## MobAnimation Local Script
@@ -78,4 +81,5 @@
   ## OnPLayerAdded Script
 
   - Retrieves necessary game services
-  - 
+  - Sets up initial variables for the game such as the amount of gold a player starts with
+  - Collision groups the player object so that you can't run into mobs/towers
