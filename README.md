@@ -21,7 +21,7 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 - [x] Basic troop(s) completed 
 - [ ] Difficulty selection
 - [x] Basic enemy(s) completed
-- [ ] Money system created
+- [x] Money system created
 
 ### Done by the end of week 3 goals
 
@@ -31,7 +31,7 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 - [x]  Advanced troop(s) made
 - [ ]  Upgrade system made for troops **(CUT)**
 - [ ]  Special enemy type(s) made  **(CUT)**
-- [ ]  Simple database system that stores win count
+- [x]  Simple database system that stores win count
 
 
 
