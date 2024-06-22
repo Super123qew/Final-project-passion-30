@@ -48,6 +48,7 @@
   - Collisions are turned off by setting towers in a collision group that cant touch players
   - Start the tower's attack behavior using a coroutine
   - Checks if the player has enough gold and isn't past their max limit of towers before placement
+  - Price of tower is subtracted from the players gold count if the above conditions are met
  
 ## GameController Local Script
 
