@@ -288,12 +288,16 @@ return tower
 
 ```luau
 
+local Players = game:GetService("Players")
 local PhysicsService = game:GetService("PhysicsService")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local userinputservice = game:GetService("UserInputService")
 
+local gold = Players.LocalPlayer:WaitForChild("Gold")
 local events = ReplicatedStorage:WaitForChild("events")
+local functions = ReplicatedStorage:WaitForChild("Functions")
+local requestTowerFunction = functions:WaitForChild("RequestTower")
 local towers = ReplicatedStorage:WaitForChild("Towers")
 local spawnTowerEvent = events:WaitForChild("SpawnTower")
 local camera = workspace.CurrentCamera
@@ -305,6 +309,12 @@ local canPlace = false
 local rotation = 0
 local placedTowers = 0
 local maxTowers = 10
+
+local function updateGold ()
+	gui.Gold.Text = gold.Value
+end
+updateGold()
+gold.Changed:Connect(updateGold)
 
 local function MouseRaycast(exclude)
 	local mousePosition = userinputservice:GetMouseLocation()
@@ -359,10 +369,13 @@ for i, tower in pairs(towers:GetChildren()) do
 	button.Name = tower.Name
 	button.Image = config.Image.Texture
 	button.Visible = true
+	button.Price.Text = config.Price.Value
+	button.LayoutOrder = config.Price.Value
 	button.Parent = gui.Towers
 	
 	button.Activated:Connect(function()
-		if placedTowers < maxTowers then
+		local allowedToSPawn = requestTowerFunction:InvokeServer(tower.Name)
+		if allowedToSPawn then
 		AddPlaceholderTower((tower.Name))
 		end
 	end)
@@ -411,7 +424,6 @@ RunService.RenderStepped:Connect(function()
 		end
 	end
 end)
-
 
 ```
 
