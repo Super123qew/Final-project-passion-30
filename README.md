@@ -2,7 +2,7 @@
 
 ## Description: 
 
-ROBLOX is an online platform where developer(s) can create their own game that is publicly playable by coding in Luau Script and using custom or premade models with backing code scripts and modules. Our idea is to create a game with a central theme of a tower defence simulator.
+ROBLOX is an online platform where developer(s) can create their own game that is publicly playable by coding in Luau ("Dialect" of Lua) Script and using custom or premade models with backing code scripts and modules. Our idea is to create a game with a central theme of a tower defence simulator.
 
 ![images](https://devforum-uploads.s3.dualstack.us-east-2.amazonaws.com/uploads/original/4X/d/a/a/daa29e5cbfbb2782593d864b610e7294cd653262.png)
 
