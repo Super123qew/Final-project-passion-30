@@ -448,7 +448,31 @@ DataStore Script (WIP)
 
 ```
 
+OnPlayerAdded Script
+
 ```luau
+
+local players = game:GetService("Players")
+local PhysicsService = game:GetService("PhysicsService")
+
+players.PlayerAdded:Connect(function(player)
+	
+	local gold = Instance.new("IntValue")
+	gold.Name = "Gold"
+	gold.Value = 250
+	gold.Parent = player
+	 
+
+
+	
+	player.CharacterAdded:Connect(function(character)
+		for i, object in ipairs(character:GetDescendants()) do
+			if object:IsA("BasePart") then
+				object.CollisionGroup = "Player"
+			end
+		end
+	end)
+end)
 
 ```
 
