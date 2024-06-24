@@ -77,7 +77,7 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 - Create a lobby area before playing
 - Map selection/vote before gameplay
 - Troop selection for different playstyles
-- Implemented tower "animations" (They just turn toward the enemy when attacking)
+- Implement tower "animations" (They just turn toward the enemy when attacking)
 - Shop system for buying troops/power-ups
 
 Despite our initial optimism, many mechanics never made it past the drawing board as the syntax for LUAU in the dev console was extremely foreign for us. Despite this, we felt that we made great strides in our knowledge of Lua and felt accomplished in that we made something.
