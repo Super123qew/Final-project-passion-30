@@ -25,12 +25,12 @@ Our game has classes of enemies who get stronger as the game progresses and who 
 
 ### Done by the end of week 3 goals
 
-- [ ]  Sound design incorporated in gameplay **(CUT)**
+- [ ]  Sound design incorporated in gameplay 
 - [ ]  Lobby area before playing
 - [x]  Graphic design revamped (Custom models)
 - [x]  Advanced troop(s) made
-- [ ]  Upgrade system made for troops **(CUT)**
-- [ ]  Special enemy type(s) made  **(CUT)**
+- [ ]  Upgrade system made for troops 
+- [ ]  Special enemy type(s) made 
 - [x]  Simple database system that stores win count
 
 
